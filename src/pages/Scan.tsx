@@ -10,7 +10,8 @@ const Scan = () => {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<any | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const cameraInputRef = useRef<HTMLInputElement>(null);
+  const galleryInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -51,9 +52,8 @@ const Scan = () => {
       setError(t('serviceUnavailable'));
     } finally {
       setLoading(false);
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
-      }
+      if (cameraInputRef.current) cameraInputRef.current.value = '';
+      if (galleryInputRef.current) galleryInputRef.current.value = '';
     }
   };
 
@@ -71,24 +71,42 @@ const Scan = () => {
       <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('scanYourCrop')}</h2>
 
       {!loading && !result && !error && (
-        <div className="flex flex-col items-center justify-center space-y-6 mt-10">
-          <div 
-            onClick={() => fileInputRef.current?.click()}
-            className="w-48 h-48 bg-cropdoc-light rounded-full flex flex-col items-center justify-center cursor-pointer hover:bg-[#d4edd9] transition-colors border-4 border-dashed border-cropdoc/50 shadow-sm active:scale-95"
-          >
-            <Camera size={48} className="text-cropdoc mb-2" />
-            <span className="text-cropdoc-dark font-semibold px-4 text-center">{t('takePhoto')}</span>
+        <div className="flex flex-col w-full space-y-6 mt-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full">
+            <button 
+              onClick={() => cameraInputRef.current?.click()}
+              className="flex-1 bg-cropdoc hover:bg-cropdoc-dark text-white font-bold py-4 px-6 rounded-2xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-3"
+            >
+              <Camera size={24} />
+              <span>{t('takePhoto')}</span>
+            </button>
+            <button 
+              onClick={() => galleryInputRef.current?.click()}
+              className="flex-1 bg-cropdoc hover:bg-cropdoc-dark text-white font-bold py-4 px-6 rounded-2xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-3"
+            >
+              <Upload size={24} />
+              <span>{t('uploadImage')}</span>
+            </button>
           </div>
+          
           <input 
             type="file" 
             accept="image/*" 
             capture="environment"
             className="hidden" 
-            ref={fileInputRef}
+            ref={cameraInputRef}
             onChange={handleFileChange}
           />
+          <input 
+            type="file" 
+            accept="image/*" 
+            className="hidden" 
+            ref={galleryInputRef}
+            onChange={handleFileChange}
+          />
+          
           <p className="text-gray-500 text-center text-sm px-4">
-            Upload a clear photo of the affected crop leaf for analysis.
+            Take a photo of the affected crop leaf or upload one from your gallery for analysis.
           </p>
         </div>
       )}
