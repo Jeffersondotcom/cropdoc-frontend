@@ -30,7 +30,7 @@ const Scan = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('https://cropdoc-api.onrender.com/predict', {
+      const response = await fetch('https://cropdoc-api-production.up.railway.app/predict', {
         method: 'POST',
         body: formData,
       });
