@@ -19,7 +19,7 @@ const Pricing = () => {
           <ul className="space-y-3 mb-6">
             <li className="flex items-center gap-3 text-gray-100">
               <Check size={20} className="text-greendoc flex-shrink-0" />
-              <span>5 scans per month</span>
+              <span>5 scans per day</span>
             </li>
             <li className="flex items-center gap-3 text-gray-100">
               <Check size={20} className="text-greendoc flex-shrink-0" />
