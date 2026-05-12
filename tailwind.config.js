@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        cropdoc: {
-          light: '#e6f5eb', // Very light green
-          DEFAULT: '#008751', // Nigerian Flag Green
-          dark: '#005f38',
+        greendoc: {
+          light: '#22c55e',
+          DEFAULT: '#16a34a',
+          dark: '#2d5a36',
         }
       }
     },

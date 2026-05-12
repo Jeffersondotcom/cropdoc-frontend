@@ -12,7 +12,7 @@ interface Dictionary {
 
 const translations: Dictionary = {
   en: {
-    appTitle: "CropDoc",
+    appTitle: "GreenDoc",
     tagline: "A plant pathologist in every farmer's pocket.",
     description: "Instantly detect crop diseases with artificial intelligence and get actionable treatment plans.",
     scanYourCrop: "Scan Your Crop",
@@ -28,7 +28,7 @@ const translations: Dictionary = {
     history: "History",
     pricing: "Pricing",
     freeTier: "Free",
-    plusTier: "CropDoc Plus",
+    plusTier: "GreenDoc Plus",
     enterpriseTier: "Enterprise",
     takePhoto: "Take Photo",
     uploadImage: "Upload Image",
@@ -39,7 +39,7 @@ const translations: Dictionary = {
     noScans: "No past scans found.",
   },
   ha: {
-    appTitle: "CropDoc",
+    appTitle: "GreenDoc",
     tagline: "Masanin tsirrai a aljihun kowane manomi.",
     description: "Gano cututtukan amfanin gona nan take da basirar wucin gadi.",
     scanYourCrop: "Duba Amfanin Gona",
@@ -55,7 +55,7 @@ const translations: Dictionary = {
     history: "Tarihi",
     pricing: "Farashi",
     freeTier: "Kyauta",
-    plusTier: "CropDoc Plus",
+    plusTier: "GreenDoc Plus",
     enterpriseTier: "Kamfanoni",
     takePhoto: "Dauki Hoto",
     uploadImage: "Dora Hoto",
@@ -66,7 +66,7 @@ const translations: Dictionary = {
     noScans: "Babu tarihin bincike.",
   },
   yo: {
-    appTitle: "CropDoc",
+    appTitle: "GreenDoc",
     tagline: "Oníṣègùn ọ̀gbìn nínú àpò àwọn àgbẹ̀.",
     description: "Ṣàwárí àwọn àrùn irè oko lẹ́sẹ̀kẹsẹ̀ pẹ̀lú ìmọ̀ ẹ̀rọ.",
     scanYourCrop: "Ṣàyẹ̀wò Irè Oko Rẹ",
@@ -82,7 +82,7 @@ const translations: Dictionary = {
     history: "Ìtàn",
     pricing: "Iye",
     freeTier: "Ọ̀fẹ́",
-    plusTier: "CropDoc Plus",
+    plusTier: "GreenDoc Plus",
     enterpriseTier: "Ilé-iṣẹ́ Nlá",
     takePhoto: "Ya Fọ́tò",
     uploadImage: "Gbé Fọ́tò Sókè",
@@ -93,7 +93,7 @@ const translations: Dictionary = {
     noScans: "Kò sí ìtàn àyẹ̀wò kankan.",
   },
   ig: {
-    appTitle: "CropDoc",
+    appTitle: "GreenDoc",
     tagline: "Dọkịta osisi n'akpa ndị ọrụ ugbo niile.",
     description: "Chọpụta ọrịa ihe ọkụkụ ozugbo site na iji amamihe kọmputa.",
     scanYourCrop: "Nyochaa Ihe Ọkụkụ Gị",
@@ -109,7 +109,7 @@ const translations: Dictionary = {
     history: "Akụkọ Ihe Mere Eme",
     pricing: "Ọnụ Ahịa",
     freeTier: "N'efu",
-    plusTier: "CropDoc Plus",
+    plusTier: "GreenDoc Plus",
     enterpriseTier: "Ụlọ Ọrụ Ndị Ibu",
     takePhoto: "Were Foto",
     uploadImage: "Bulite Foto",
